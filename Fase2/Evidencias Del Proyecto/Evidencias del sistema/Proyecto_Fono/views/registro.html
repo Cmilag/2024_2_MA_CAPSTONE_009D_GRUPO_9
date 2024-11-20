@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for modern icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/registro.css">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="content">
+            <div class="menu container-menu">
+                <a href="/home" class="logo">
+                    <img src="/assets/logo.png" class="menu-icono" height="60" alt="Logo Red fonoaudiologo">
+                </a>
+                <!-- Icono de hamburguesa para dispositivos pequeños -->
+                <button class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recomendaciones">Recomendaciones</a></li>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contactanos">Contacto</a></li>
+                        <li><a href="/iniciarsesion">Inicia Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h4><p>Bienvenido a fonoaudiologia voces en crecimiento</p></h4>
+                <p>Inicia sesión para accedera tu plan personalizados</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in" onclick="location.href='iniciarsesion';">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <p>Únete a nuestra red fonoaudiologia y crea tu cuenta hoy para tu bienestar emocional.</p>
+                <br>
+                <form class="form form-register" id="registerForm" novalidate>
+                    <div>
+                        <label><i class='bx bx-user'></i>
+                            <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                        </label>
+                        <div id="errorNombre" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-user'></i>
+                            <input type="text" placeholder="Apellido" name="apellido" id="apellido" required>
+                        </label>
+                        <div id="errorApellido" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-id-card'></i>
+                            <input type="text" placeholder="RUT" name="rut" id="rut" required>
+                        </label>
+                        <div id="errorRut" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electrónico" name="correo" id="correo" required>
+                        </label>
+                        <div id="errorCorreo" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="password" id="password" required>
+                        </label>
+                        <div id="errorPassword" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword" id="confirmPassword" required>
+                        </label>
+                        <div id="errorConfirmPassword" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-calendar'></i>
+                            <input type="date" placeholder="Fecha de Nacimiento" name="fechaNacimiento" id="fechaNacimiento" required>
+                        </label>
+                        <div id="errorFechaNacimiento" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-phone'></i>
+                            <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required>
+                        </label>
+                        <div id="errorTelefono" class="error-message"></div>
+                    </div>
+                    <div>
+                        <label><i class='bx bx-home'></i>
+                            <input type="text" placeholder="Dirección" name="direccion" id="direccion">
+                        </label>
+                        <div id="errorDireccion" class="error-message"></div>
+                    </div>
+
+                    <div>
+                        <label><i class='bx bx-user-circle'></i>
+                            <select name="tipoUsuario" id="tipoUsuario" required>
+                                <option value="" disabled selected>Selecciona el tipo de usuario</option>
+                                <option value="padre">Padre</option>
+                                <option value="fonoaudiologa">Fonoaudióloga</option>
+                            </select>
+                        </label>
+                        <div id="errorTipoUsuario" class="error-message"></div>
+                    </div>
+                    
+                    <!-- Campos adicionales para Fonoaudióloga -->
+                    <div id="fonoaudiologaFields" style="display: none;">
+                        <div>
+                            <label><i class='bx bx-school'></i>
+                                <input type="text" placeholder="Universidad" name="universidad" id="universidad">
+                            </label>
+                            <div id="errorUniversidad" class="error-message"></div>
+                        </div>
+                        <div>
+                            <label><i class='bx bx-book'></i>
+                                <input type="text" placeholder="Carrera" name="carrera" id="carrera">
+                            </label>
+                            <div id="errorCarrera" class="error-message"></div>
+                        </div>
+                        <div>
+                            <label><i class='bx bx-medal'></i>
+                                <input type="text" placeholder="Especialidad" name="especialidad" id="especialidad">
+                            </label>
+                            <div id="errorEspecialidad" class="error-message"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <input type="submit" value="Registrarse">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </main>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2024. Todos los derechos reservados.</p>
+                <div class="social-media">
+    
+                </div>
+            </div>
+        </footer>
+
+    <!-- JavaScript para el menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <script src="/js/registro.js"></script>
+</body>
+</html>

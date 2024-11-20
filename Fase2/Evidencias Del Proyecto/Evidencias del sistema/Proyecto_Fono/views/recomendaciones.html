@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recomendaciones.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>fonoaudiologia - Recomendaciones</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="content">
+            <div class="menu container-menu">
+                <a href="/home" class="logo">
+                    <img src="/assets/logo.png" class="menu-icono" height="60" alt="Logo Red fonoaudiologo">
+                </a>
+                <!-- Icono de hamburguesa para dispositivos pequeños -->
+                <button class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recomendaciones">Recomendaciones</a></li>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contactanos">Contacto</a></li>
+                        <li><a href="/iniciarsesion">Inicia Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <!-- Sección "Quiénes Somos" -->
+        <section class="about-us">
+            <h1>¿Qué es la estimulación temprana?</h1>
+            <p>Es un conjunto de actividades y estrategias que se emplean para apoyar el desarrollo de habilidades en niños desde su nacimiento hasta los seis años de edad, una etapa en la que su cerebro es muy receptivo y adaptable.</p>
+            <p>A través de ejercicios de juego, contacto y comunicación, ayudamos a que el niño alcance sus hitos de desarrollo, como gatear, hablar, reconocer emociones, entre otros. Cada actividad se adapta a su edad y a su ritmo de aprendizaje, porque cada niño es único.</p>
+        </section>
+
+        <center><h2>Estimulación en casa</h2></center>
+
+        <!-- Sección de Tarjetas -->
+        <section class="tarjetas-container">
+            <div class="tarjeta">
+                <img src="/assets/imitacion.jpg" alt="¿Qué hacemos?" class="tarjeta-img">
+                <div class="tarjeta-content">
+                    <h3>Imitaciones de sonidos y palabras</h3>
+                    <p>Juega con tu hijo a imitar sonidos de animales o de objetos cotidianos, como "miau" (gato), "muu" (vaca). Esto ayuda a que el niño se acostumbre a usar sonidos para comunicarse.</p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="/assets/cancion.jpg" alt="Nuestro enfoque" class="tarjeta-img">
+                <div class="tarjeta-content">
+                    <h3>Canciones y rimas</h3>
+                    <p>Canta canciones infantiles y rimas con movimientos, como aplausos o golpecitos. Estas canciones suelen tener palabras repetitivas que ayudan a los niños a recordar y aprender.</p>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <img src="/assets/juegos.jpg" alt="Nuestro enfoque" class="tarjeta-img">
+                <div class="tarjeta-content">
+                    <h3>Juegos de señas y gestos</h3>
+                    <p>Haz gestos para representar palabras y enseña al niño a usarlos, como señalar una bebida cuando tiene sed o juntar las manos para "por favor". Esto es útil especialmente si aún no usa muchas palabras.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section class="video-container">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/IRdHxNg-wu4" title="Video sobre estimulación temprana" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <script src="/js/home.js"></script>
+</body>
+</html>

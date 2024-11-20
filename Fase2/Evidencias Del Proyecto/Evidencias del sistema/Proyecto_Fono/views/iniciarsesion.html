@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for modern icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/iniciarsesion.css">
+    <title>INICIO SESIÓN</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="content">
+            <div class="menu container-menu">
+                <a href="/home" class="logo">
+                    <img src="/assets/logo.png" class="menu-icono" height="60" alt="Logo Red fonoaudiologo">
+                </a>
+                <!-- Icono de hamburguesa para dispositivos pequeños -->
+                <button class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recomendaciones">Recomendaciones</a></li>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contactanos">Contacto</a></li>
+                        <li><a href="/iniciarsesion">Inicia Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h4><p>Bienvenido a fonoaudiologia voces en crecimiento</p></h4>
+                <p>Bienvenidos a nuestra plataforma de fonoaudiología, diseñada para apoyar el desarrollo de su hijo. Inicien sesión para acceder a las sesiones personalizadas, recursos exclusivos y recomendaciones que ayudarán en cada paso del proceso terapéutico.</p>  
+
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <p>Inicia sesión para accedera tu plan personalizados</p>
+                <br>
+                <form class="form form-register" id="loginForm" novalidate>
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electrónico" name="email" id="email" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="password" id="password" required>
+                        </label>
+                    </div>
+                    <input type="submit" value="Iniciar sesión">
+                    <input type="button" value="Solicitar cuenta" id="sign-in" onclick="location.href='registro';">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-error">Contraseña incorrecta</div>
+                    <div class="alerta-exito">Sesión iniciada correctamente</div>
+                </form>                               
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+        <!-- JavaScript para el menú hamburguesa -->
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
+    <script src="/js/iniciarsesion.js"></script>
+</body>
+</html>
